@@ -1,0 +1,37 @@
+image: node:latest
+
+stages:
+  - exec_build
+  - exec_deploy
+
+build:
+  stage: exec_build
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - node_modules/
+  only:
+    - develop
+  tags:
+    - demo
+  script:
+    - cp .env.prod .env
+    - npm i --silent --force
+    - CI=FALSE npm run build
+  artifacts:
+    paths:
+      - build/
+
+deploy:
+  stage: exec_deploy
+  only:
+    - develop
+  tags:
+    - demo
+  dependencies:
+    - build
+  script:
+    - rm -rf ../build/dataneo
+    - mkdir ../build/dataneo
+    - cp -r build/* ../build/dataneo/
+

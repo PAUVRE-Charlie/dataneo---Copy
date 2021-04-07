@@ -1,0 +1,51 @@
+{
+  "name": "dataneo",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "./",
+  "dependencies": {
+    "@craco/craco": "^6.1.1",
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "@turf/circle": "^6.3.0",
+    "chokidar": "^3.5.1",
+    "js-cookie": "^2.2.1",
+    "mapbox-gl": "^2.2.0",
+    "react": "^17.0.1",
+    "react-calendar": "^3.3.1",
+    "react-dom": "^17.0.1",
+    "react-feather": "^2.0.9",
+    "react-material-ui-carousel": "^2.1.2",
+    "react-player": "^2.9.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.3",
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.35",
+    "postcss-purgecss": "^2.0.3",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
+  },
+  "optionalDependencies": {
+    "fsevents": "2.3.2"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
